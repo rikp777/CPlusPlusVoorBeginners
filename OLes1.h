@@ -1,5 +1,6 @@
 //
 // Created by rikpe on 09/10/2023.
+// V1.2
 //
 
 #include <iostream>
@@ -36,16 +37,13 @@ public:
         int leeftijdInDagen = mijnLeeftijd * dagenInJaar;
         std::cout << "Leeftijd in dagen: " << leeftijdInDagen << std::endl;
 
-        // Maak nu je eigen variabelen en geef alle doosjes een naam en een waarde
+        // Maak nu je eigen variabelen en geef alle doosjes een naam en een waarde gebruik alle geleerde datatypes
 
 
-
+        // Vervang de waardes in je eigen variabelen
 
 
         // Print je eigen variables op het scherm
-
-
-
 
 
     }

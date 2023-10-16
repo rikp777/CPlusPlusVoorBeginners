@@ -30,7 +30,7 @@ bool vertaalJaNee(const std::string &antwoord) {
 }
 
 int main() {
-    int ikBenBijLes = 6;
+    int ikBenBijLes = 3;
     bool ikGaOefenen = vertaalJaNee("JA");
 
     switch (ikBenBijLes) {

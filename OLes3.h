@@ -1,8 +1,11 @@
 //
 // Created by rikpe on 09/10/2023.
+// V1.2
 //
 
 #include <iostream>
+#include <cstdlib> // for std::rand
+#include <ctime>  // for std::time
 
 #ifndef BEGINNER_OLES3_H
 #define BEGINNER_OLES3_H
@@ -21,6 +24,9 @@ public:
 
         // Deel 3: Speel met lussen
         lussen();  // Roep de lussen functie aan
+        ageGroupClassification();
+        countdown();
+        raadHetNummer();
     }
 
     void magIkStemmen(int leeftijd) {
@@ -61,17 +67,12 @@ public:
         // Nu mag jij een switch schrijven die weergeeft of een dag een school of weekend dag is
         // Tip: Maandag t/m Vrijdag zijn school dagen, Zaterdag en Zondag zijn weekend dagen
 
-        switch (dagNummer) {
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-
-            default:
-                std::cout << "Ongeldig nummer!" << std::endl;  // dit gebeurt als geen enkele 'case' overeenkomt
+        if (dagNummer >= 1 && dagNummer <= 5) {
+            std::cout << "Het is een weekdag." << std::endl;
+        } else if (dagNummer >= 6 && dagNummer <= 7) {
+            std::cout << "Het is weekend!" << std::endl;
+        } else {
+            std::cout << "Ongeldig nummer!" << std::endl;
         }
     }
 
@@ -101,6 +102,66 @@ public:
                  herhalingen);  // controleert de voorwaarde nadat de lus is uitgevoerd, dus het gebeurt minstens één keer
         std::cout << std::endl;
     }
+
+    void ageGroupClassification() {
+        int leeftijd;
+        std::cout << "Voer je leeftijd in: ";
+        std::cin >> leeftijd;
+
+        if (leeftijd >= 0 && leeftijd <= 12) {
+            std::cout << "Je bent een kind." << std::endl;
+        } else if (leeftijd >= 13 && leeftijd <= 19) {
+            std::cout << "Je bent een tiener." << std::endl;
+        } else if (leeftijd >= 20 && leeftijd <= 59) {
+            std::cout << "Je bent een volwassene." << std::endl;
+        } else if (leeftijd >= 60) {
+            std::cout << "Je bent een senior." << std::endl;
+        } else {
+            std::cout << "Ongeldige leeftijd." << std::endl;
+        }
+    }
+
+    void countdown() {
+        int nummer;
+        std::cout << "Voer een startnummer voor de countdown in: ";
+        std::cin >> nummer;
+
+        for (int i = nummer; i >= 0; i--) {
+            std::cout << i << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    void raadHetNummer() {
+        std::srand(std::time(0)); // seed willekeurige getalgenerator
+        int willekeurigNummer = std::rand() % 51; // random number between 0 and 50
+        int gok;
+        int pogingen = 0;
+
+        std::cout << "Raad het getal tussen 1 en 50: ";
+
+        while (pogingen < 5) {
+            std::cin >> gok;
+
+            // Jouw if-else logica hier om te controleren of de gok te hoog, te laag of correct is
+            pogingen++;
+
+            if (gok == willekeurigNummer) {
+                std::cout << "Gefeliciteerd! Je hebt het juiste getal geraden!" << std::endl;
+                break;  // exit the loop if the correct number is guessed
+            } else if (gok < willekeurigNummer) {
+                std::cout << "Te laag! Probeer het opnieuw: ";
+            } else {
+                std::cout << "Te hoog! Probeer het opnieuw: ";
+            }
+
+        }
+
+        if (pogingen >= 5 && gok != willekeurigNummer) {
+            std::cout << "Helaas! Je hebt al je pogingen gebruikt. Het juiste getal was " << willekeurigNummer << "." << std::endl;
+        }
+    }
+
 };
 
 
