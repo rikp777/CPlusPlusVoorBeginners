@@ -46,6 +46,32 @@ public:  // Dit betekent dat iedereen deze dingen kan gebruiken
         // Deze functie moet het gemiddelde van a en b berekenen en teruggeven
         // TODO: schrijf je code hier
     }
+
+
+    void stoplicht(){
+        enum kleur {ROOD, GROEN, ORANJE}; // Dit is een enum, een lijst met opties
+
+        kleur huidigeKleur = ROOD;
+        bool politieOvername = true;
+
+        if(politieOvername){
+            std::cout << "Politie neemt het over! Noodgeval politie krijgt voorang" << std::endl;
+        }
+
+        switch (huidigeKleur) {
+            case ROOD:
+                std::cout << "Stoppen!" << std::endl;
+                break;
+            case GROEN:
+                std::cout << "Doorrijden!" << std::endl;
+                break;
+            case ORANJE:
+                std::cout << "Stoppen! Het licht wordt zo rood" << std::endl;
+                break;
+            default:
+                std::cout << "Ongeldig nummer!" << std::endl;  // dit gebeurt als geen enkele 'case' overeenkomt
+        }
+    }
 };
 
 

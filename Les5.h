@@ -12,21 +12,37 @@
 class Les5 { // We beginnen een nieuwe klasse genaamd Les5
 public: // Dit betekent dat iedereen deze dingen kan gebruiken
     void runMijnCode() { // Dit is waar onze code begint
-        arrayList();
+        arrayList(); // Roep de functie arrayList aan om te laten zien hoe arrays werken
 
-        int mijnArray[5] = {1, 2, 3, 4, 5};
-        std::vector<int> mijnVector = {1, 2, 3, 4, 5};
+        // Array vs Vector:
+        // Een array, zoals mijnArray, heeft een vaste grootte. Dit betekent dat je niet zomaar meer elementen kunt toevoegen nadat het is gemaakt.
+        // Een vector, zoals mijnVector, kan van grootte veranderen. Je kunt elementen toevoegen of verwijderen, en de vector past zich automatisch aan.
 
-        std::cout << "Som van de array: " << somArray(mijnArray, 5) << std::endl;
-        std::cout << "Som van de vector: " << somVector(mijnVector) << std::endl;
+        // Stel je een toren voor die je bouwt met een vooraf bepaald aantal blokken. Dit aantal blokken staat vast en kan niet worden veranderd nadat je met de bouw bent begonnen.
+        // Deze toren staat symbool voor een array in C++. Een array heeft een vaste grootte die je moet bepalen wanneer je de array creëert.
+        // Zodra de array is gemaakt, kan je het aantal elementen (of blokken) in deze array niet meer veranderen.
+        // Als je een array van 5 elementen maakt, kun je daar niet zomaar een zesde element aan toevoegen of een element verwijderen om de grootte te verkleinen.
+        // De toren blijft altijd uit precies hetzelfde aantal blokken bestaan.
+
+        // Nu, stel je een andere toren voor waarbij je tijdens de bouw blokken kunt toevoegen of verwijderen.
+        // Je begint misschien met een paar blokken, maar je kunt er meer toevoegen als je wilt, of blokken weghalen als dat nodig is.
+        // Deze flexibele toren is vergelijkbaar met een vector in C++. Een vector kan dynamisch van grootte veranderen.
+        // Je kunt elementen toevoegen aan het einde van de vector (een nieuw blok bovenop de toren plaatsen), of elementen verwijderen (blokken van de toren afhalen).
+        // Dit geeft je veel meer flexibiliteit in vergelijking met een array, omdat je niet beperkt bent tot een vooraf bepaalde grootte.
+        int mijnArray[5] = {1, 2, 3, 4, 5}; // Dit maakt een array van 5 gehele getallen
+        std::vector<int> mijnVector = {1, 2, 3, 4, 5}; // Dit maakt een vector van gehele getallen
+
+        // Print de som van de waarden in mijnArray en mijnVector
+        std::cout << "Som van de array: " << somArray(mijnArray, 5) << std::endl; // Toont de som van mijnArray
+        std::cout << "Som van de vector: " << somVector(mijnVector) << std::endl; // Toont de som van mijnVector
 
         // Print het gemiddelde van de elementen in mijnArray en mijnVector
-        std::cout << "Gemiddelde van de array: " << gemiddeldeArray(mijnArray, 5) << std::endl;
-        std::cout << "Gemiddelde van de vector: " << gemiddeldeVector(mijnVector) << std::endl;
+        std::cout << "Gemiddelde van de array: " << gemiddeldeArray(mijnArray, 5) << std::endl; // Toont het gemiddelde van mijnArray
+        std::cout << "Gemiddelde van de vector: " << gemiddeldeVector(mijnVector) << std::endl; // Toont het gemiddelde van mijnVector
     }
 
     void arrayList() {
-        int getallen[5] = {1, 2, 3, 4, 5};  // Een array van 5 integers
+        int getallen[5] = {1, 2, 3, 4, 5}; // Een array van 5 integers
 
         // Toegang tot elementen van de array met behulp van een index
         std::cout << "Het eerste getal is: " << getallen[0] << std::endl;  // Indexen beginnen bij 0
@@ -37,12 +53,12 @@ public: // Dit betekent dat iedereen deze dingen kan gebruiken
         std::vector<int> getallen = {1, 2, 3, 4, 5};  // Een vector van integers
 
         // Elementen toevoegen aan de vector
-        getallen.push_back(6);
-        getallen.push_back(7);
+        getallen.push_back(6); // Voegt het getal 6 toe aan de vector
+        getallen.push_back(7); // Voegt het getal 7 toe aan de vector
 
         // Toegang tot elementen van de vector
-        std::cout << "Het eerste getal is: " << getallen[0] << std::endl;
-        std::cout << "Het derde getal is: " << getallen[2] << std::endl;
+        std::cout << "Het eerste getal is: " << getallen[0] << std::endl; // Toont het eerste getal in de vector
+        std::cout << "Het derde getal is: " << getallen[2] << std::endl; // Toont het derde getal in de vector
     }
 
     int somArray(int arr[], int grootte) {
@@ -50,7 +66,7 @@ public: // Dit betekent dat iedereen deze dingen kan gebruiken
         for (int i = 0; i < grootte; i++) {
             som += arr[i];  // Optellen van elk element van de array
         }
-        return som;
+        return som; // Geef de totale som terug
     }
 
     int somVector(std::vector<int> vec) {

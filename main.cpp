@@ -13,6 +13,7 @@
 #include "OLes5.h"
 #include "Les6.h"
 #include "OLes6.h"
+#include "Les7.h"
 
 bool vertaalJaNee(const std::string &antwoord) {
     // Converteer het antwoord naar hoofdletters om het case-insensitive te maken
@@ -30,7 +31,7 @@ bool vertaalJaNee(const std::string &antwoord) {
 }
 
 int main() {
-    int ikBenBijLes = 3;
+    int ikBenBijLes = 7;
     bool ikGaOefenen = vertaalJaNee("JA");
 
     switch (ikBenBijLes) {
@@ -128,6 +129,13 @@ int main() {
                 OLes6 oles6;
                 oles6.runMijnCode();
             }
+            break;
+        case 7:
+            std::cout << "Les 7 wordt gerund (geen oefening): " << std::endl;
+            std::cout << std::endl;  // Print een lege regel
+
+            Les7 les7;
+            les7.runMijnCode();
             break;
         default:
             std::cout << "Ongeldige lesnummer" << std::endl;  // voeg deze regel toe voor het geval ikBenBijLes geen geldige waarde heeft

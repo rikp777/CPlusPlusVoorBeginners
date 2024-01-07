@@ -135,14 +135,51 @@ public:
 
         if (eenheid == 'C' || eenheid == 'c') {
             // Convert to Celsius and print result
-            double resultaat = (temperatuur - 32) * 5/9;
+            double resultaat = (temperatuur - 32) * 5 / 9;
             std::cout << "Resultaat: " << resultaat << "°C" << std::endl;
         } else if (eenheid == 'F' || eenheid == 'f') {
             // Convert to Fahrenheit and print result
-            double resultaat = (temperatuur * 9/5) + 32;
+            double resultaat = (temperatuur * 9 / 5) + 32;
             std::cout << "Resultaat: " << resultaat << "°F" << std::endl;
         } else {
             std::cout << "Fout: Ongeldige eenheid!" << std::endl;
+        }
+    }
+
+    // Verzin een avontuur met 3 keuzes in het spel. Het doel van het spel dat je dus 3^3=27 keuzes hebt en maar via een weg bij de schat kunt komen.
+    // dus je zult een if statement in een if statement in een if statement gaan hebben
+    void avontuur() {
+        std::cout << "Je wordt wakker in een mysterieus bos. Twee paden liggen voor je.\n";
+        std::cout << "Het linkerpad leidt naar een donker bos.\n";
+        std::cout << "Het rechterpad leidt naar een zonnige weide.\n\n";
+
+        std::string choice;
+        std::cout << "Welk pad kies je? (links/rechts): ";
+        std::cin >> choice;
+
+        if (choice == "links") {
+            std::cout << "Je loopt door het donkere bos en vindt een schatkist!\n";
+            std::cout << "  ____\n";
+            std::cout << " /    \\\n";
+            std::cout << "|      |\n";
+            std::cout << " \\____/\n";
+            std::cout << "Een schatkist!\n";
+        } else if (choice == "rechts") {
+            std::cout << "Je loopt over de zonnige weide en ontmoet een vriendelijke draak!\n";
+            std::cout << "     /\\                 \n";
+            std::cout << "    /  \\               \n";
+            std::cout << "   /    \\              \n";
+            std::cout << "  /      \\             \n";
+            std::cout << " /________\\            \n";
+            std::cout << "   {____}              \n";
+            std::cout << "    /  \\              \n";
+            std::cout << "   /    \\              \n";
+            std::cout << "  /      \\             \n";
+            std::cout << " /        \\            \n";
+            std::cout << "/          \\           \n";
+            std::cout << "Een vriendelijke draak!\n";
+        } else {
+            std::cout << "Verward blijf je staan. Soms is niet kiezen ook een keuze.\n";
         }
     }
 };

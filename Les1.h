@@ -48,7 +48,7 @@ public:
 
     // Variabelen:
     // Een variabele is als een doos waarin we een waarde kunnen stoppen. We geven deze doos een naam zodat we later terug kunnen komen en zien wat erin zit.
-    int dataTypes() {
+    void dataTypes() {
         int number;  // We maken een doos met de naam 'number', maar stoppen er nog niets in
         float decimal;  // Een doos met de naam 'decimal', maar ook leeg voor nu
         char letter;  // Een lege doos met de naam 'letter'
@@ -56,7 +56,7 @@ public:
     }
 
 
-    int initDataTypes() {
+    void initDataTypes() {
         int number = 10;  // Een doos met de naam 'number' krijgt het getal 10
         char letter = 'A';  // Een doos met de naam 'letter' krijgt de letter 'A'
 
@@ -64,7 +64,7 @@ public:
         decimal = 3.14;  // Nu vullen we de doos 'decimal' met het getal 3.14
     }
 
-    int print() {
+    void print() {
         int number = 34;  // We maken een doos met de naam 'number' en stoppen het getal 34 erin
 
         // Nu sturen we de waarde van 'number' naar het scherm zodat we het kunnen zien

@@ -11,6 +11,7 @@ class Les4 { // We beginnen een nieuwe klasse genaamd Les4
 public: // Dit betekent dat iedereen deze dingen kan gebruiken
     void runMijnCode() { // Dit is waar onze code begint
         zegHallo(); // We roepen de functie aan en zeggen "Hallo Wereld!"
+        stoplicht(); // We roepen de functie aan en zeggen "Doorrijden!" of "Stoppen!"
 
         int resultaat2 = doeIets(10, 3);  // We roepen de functie 'doeIets' aan en slaan het resultaat op in resultaat2
         std::cout << "Het resultaat is: " << resultaat2 << std::endl;  // We laten het resultaat zien
@@ -27,11 +28,30 @@ public: // Dit betekent dat iedereen deze dingen kan gebruiken
         std::cout << "Product: " << product << std::endl;  // We laten het product zien
         std::cout << "Quotient: " << quotient << std::endl;  // We laten het quotient zien
 
+        plussen(); // We roepen de functie aan en zeggen "Het nummer is: 10" en "Het nummer is: 11"
+        operatorsHerhaling();
     }
 
      // Dit is de definitie van onze functie
     void zegHallo() {  // 'void' betekent dat de functie niets teruggeeft
         std::cout << "Hallo Wereld!" << std::endl;  // We zeggen "Hallo Wereld!"
+    }
+
+    void stoplicht(){
+        bool rood_licht = false;
+        bool groen_licht = false;
+
+        if(rood_licht == true){
+            std::cout << "Stoppen!" << std::endl;
+        }else{
+            std::cout << "Doorrijden!" << std::endl;
+        }
+
+        if(groen_licht){ // dit is hetzelfde als groen_licht == true
+            std::cout << "Doorrijden! het licht is groen" << std::endl;
+        } else {
+            std::cout << "Stoppen! het licht is niet groen" << std::endl;
+        }
     }
 
     int verschil(int a, int b) {  // Deze functie berekent het verschil tussen a en b
@@ -61,6 +81,80 @@ public: // Dit betekent dat iedereen deze dingen kan gebruiken
         } else {
             std::cout << "Delen door nul is niet toegestaan!" << std::endl;  // We laten weten dat delen door nul niet mag
             return 0;  // We sturen 0 terug als b nul is
+        }
+    }
+
+    void plussen(){
+        int nummer = 10;
+
+        std::cout << "Het nummer is: (en gaat daarna optellen)" << nummer++ << std::endl;
+        std::cout << "Het nummer is: " << nummer << std::endl;
+
+
+        std::cout << "Het nummer is: (en gaat daarna aftellen)" << nummer-- << std::endl;
+        std::cout << "Het nummer is: " << nummer << std::endl;
+    }
+
+
+    void operatorsHerhaling(){
+        int nummer1 = 10;
+        int nummer2 = 20;
+
+        std::cout << "nummer1 < nummer2: " << (nummer1 < nummer2) << std::endl;
+        std::cout << "nummer1 <= nummer2: " << (nummer1 <= nummer2) << std::endl;
+        std::cout << "nummer1 > nummer2: " << (nummer1 > nummer2) << std::endl;
+        std::cout << "nummer1 >= nummer2: " << (nummer1 >= nummer2) << std::endl;
+        std::cout << "nummer1 == nummer2: " << (nummer1 == nummer2) << std::endl;
+        std::cout << "nummer1 != nummer2: " << (nummer1 != nummer2) << std::endl;
+
+        bool isGroter = nummer1 > nummer2; // hier stoppen we de conditie in een bakje / variable
+
+        std::cout << "isGroter: " << isGroter << std::endl;
+
+        bool a = true;
+        bool b = false;
+        bool c = true;
+
+        std::cout << "a && b: " << (a && b) << std::endl; // && betekent en. het resultaat is alleen true als beide waardes true zijn
+        std::cout << "a || c: " << (a || c) << std::endl; // || betekent of. het resultaat is alleen false als beide waardes false zijn
+        std::cout << "a && b && c: " << (a && b && c) << std::endl; // && betekent en. het resultaat is alleen true als alle waardes true zijn
+
+        //iets ingewikkelder
+        std::cout << "!(a && b) || c: " << (!(a && b) || c) << std::endl; // ! betekent niet. het resultaat is alleen true als de waarde false is
+
+        int d = 45;
+        int e = 20;
+        int f = 11;
+
+        std::cout << "Alle waardes: " << std::endl;
+        std::cout << "d: " << d << std::endl;
+        std::cout << "e: " << e << std::endl;
+        std::cout << "f: " << f << std::endl;
+
+        std::cout << "(d > e) && (d > f): " << ((d > e) && (d > f)) << std::endl;
+        std::cout << "(d == e) || (e <= f): " << ((d == e) || (e <= f)) << std::endl;
+        std::cout << "(d < e) || (d > f): " << ((d < e) || (d > f)) << std::endl;
+        std::cout << "(f > e) || (d < f): " << ((f > e) || (d < f)) << std::endl;
+        std::cout << "(d > f) && (f <= d): " << ((d > f) && (f <= d)) << std::endl;
+        std::cout << "(d > e) && (d <= f): " << ((d > e) && (d <= f)) << std::endl;
+        std::cout << "(! a) && (d == e): " << ((! a) && (d == e)) << std::endl;
+
+
+        bool stopLichtGroen = true;
+        bool politieStop = false;
+
+        if(stopLichtGroen && !politieStop){
+            std::cout << "Doorrijden!" << std::endl;
+        } else {
+            std::cout << "Stoppen!" << std::endl;
+        }
+
+        if (d >= e && d >= f) {
+            std::cout << "Het grootste getal is: " << a << std::endl;
+        } else if (b >= a && b >= c) {
+            std::cout << "Het grootste getal is: " << b << std::endl;
+        } else {
+            std::cout << "Het grootste getal is: " << c << std::endl;
         }
     }
 };
