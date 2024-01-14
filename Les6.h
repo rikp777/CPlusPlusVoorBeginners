@@ -7,20 +7,28 @@
 #ifndef BEGINNER_LESSON6_H
 #define BEGINNER_LESSON6_H
 
-// Een pointer is als een schatkaart in de wereld van het programmeren! Stel je voor, je hebt een doos en in die doos stop je een speelgoedauto.
-// Nu wil je een vriend vertellen waar je speelgoedauto is, maar in plaats van hem de doos te geven, geef je hem een schatkaart die hem naar de doos leidt. Die schatkaart is als een pointer.
+// In Les 6 verkennen we de wereld van pointers en referenties.
+// Deze concepten zijn essentieel in C++ en bieden krachtige mogelijkheden om met geheugen en variabelen om te gaan.
+// Laten we eens kijken wat er in je code gebeurt:
 
-// Opslaan van een adres:
-// Een pointer is een speciaal type variabele dat het adres van een andere variabele opslaat in plaats van een gewone waarde.
-// Het adres is de locatie in het geheugen van de computer waar die andere variabele is opgeslagen.
+// Pointers - Het Begrijpen van Adressen en Dereferencing:
+// Denk aan een pointer als een schatkaart die je de locatie (het adres) van een schat (de variabele) in het geheugen laat zien.
+// De pointerUitleg() functie demonstreert het opslaan van een adres in een pointer en hoe je de waarde op dat adres kunt bekijken (dereferencing).
+// Het is alsof je de schatkaart volgt om te zien wat er in de doos (de variabele) zit.
 
-// Waarde op het adres bekijken (dereferencing):
-// Met de pointer kun je ook kijken wat er op dat adres staat. Dit heet "dereferencing".
-// Het is als het volgen van de schatkaart om te zien wat er in de doos zit.
+// Referenties - Werken met Originele Variabelen:
+// Wanneer je een referentie gebruikt, zoals in de verdubbel() functie, werk je direct met de originele variabele, niet met een kopie.
+// Wijzigingen die je aanbrengt via de referentie, beïnvloeden de originele variabele.
+// Dit is te vergelijken met het geven van instructies aan iemand om een object in een doos te veranderen.
+// Je verandert het originele object, niet een kopie ervan.
 
-// Veranderen van de waarde op het adres:
-// Als je de waarde van de variabele wilt veranderen via de pointer, kan dat ook!
-// Het is alsof je de schatkaart volgt naar de doos, het speelgoedautootje eruit haalt en er een knuffeldier in stopt.
+// Dynamisch Geheugenbeheer - Het Gebruik van Pointers voor Arrays:
+// De maakArray() functie illustreert hoe je dynamisch geheugen kunt toewijzen voor een array met behulp van pointers.
+// Dit geeft je de flexibiliteit om de grootte van de array tijdens runtime te bepalen.
+// Het is belangrijk om na gebruik van dynamisch toegewezen geheugen dit weer vrij te geven met delete[].
+// Dit voorkomt geheugenlekken, wat gebeurt als geheugen dat niet meer nodig is, niet wordt teruggegeven aan het systeem.
+
+// Door deze concepten te begrijpen en correct toe te passen, kun je efficiënter omgaan met geheugen en complexere datastructuren en algoritmen in C++ hanteren.
 class Les6 {
     public:
     void runMijnCode(){

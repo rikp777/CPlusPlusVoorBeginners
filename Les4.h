@@ -6,7 +6,30 @@
 #ifndef BEGINNER_LESSON4_H  // We controleren of BEGINNER_LESSON4_H nog niet is gedefinieerd
 #define BEGINNER_LESSON4_H  // We definiëren BEGINNER_LESSON4_H
 
+// Uitleg over functies
 
+// In Les 4 richten we ons op het begrijpen van functies en het verdiepen van onze kennis over operatoren.
+// Dit zal je helpen complexere taken in je programma's uit te voeren en je code efficiënter te organiseren.
+// Laten we eens kijken wat er in je code gebeurt:
+
+// Functies - zegHallo(), stoplicht(), optellen(), aftrekken(), vermenigvuldigen(), delen():
+// Functies zijn als gereedschap dat je helpt om specifieke taken uit te voeren.
+// We hebben verschillende functies gecreëerd voor verschillende taken,
+// zoals het begroeten van de wereld, het controleren van een stoplicht, en basis rekenkundige operaties.
+// Elke functie voert een specifieke actie uit en retourneert een resultaat, wat ons helpt om onze code te modulariseren en herbruikbaar te maken.
+
+// Geavanceerde Operatoren - operatorsHerhaling():
+// Deze functie herhaalt het gebruik van operatoren zoals vergelijkingsoperatoren (<, >, ==, !=, enz.) en logische operatoren (&&, ||, !).
+// We gebruiken deze operatoren om complexere condities te creëren,
+// zoals het vergelijken van meerdere variabelen en het combineren van verschillende condities in één statement.
+// Dit is als het spelen met een set van legoblokjes, waarbij elke operator helpt om een complexer beeld te bouwen.
+
+// Toepassingsvoorbeelden - plussen() en scenario's in operatorsHerhaling():
+// De plussen() functie toont hoe je increment- en decrementoperatoren (++, --) kunt gebruiken.
+// In operatorsHerhaling() verkennen we hoe je operatoren kunt combineren om complexe logische condities te evalueren,
+// zoals in verkeerslichtscenario's en het vergelijken van meerdere getallen om het grootste te vinden.
+
+// Door deze functies en operatoren te begrijpen en correct te gebruiken, kun je effectiever problemen oplossen en je vaardigheden in het programmeren met C++ aanzienlijk verbeteren.
 class Les4 { // We beginnen een nieuwe klasse genaamd Les4
 public: // Dit betekent dat iedereen deze dingen kan gebruiken
     void runMijnCode() { // Dit is waar onze code begint

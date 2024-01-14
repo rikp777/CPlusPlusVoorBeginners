@@ -8,7 +8,35 @@
 #ifndef BEGINNER_LESSON5_H
 #define BEGINNER_LESSON5_H
 
+//In Les 5 leren we over het gebruik van arrays en vectoren.
+// Dit zijn essentiële hulpmiddelen in programmering die ons helpen om collecties van gegevens te beheren en te manipuleren.
+// Laten we eens kijken wat er in je code gebeurt:
 
+// Arrays en hun Eigenschappen:
+// Denk aan een array als een rij parkeerplaatsen.
+// Elk heeft een nummer (index) en kan een waarde (auto) bevatten.
+// Eens gemaakt, blijft de grootte van de array onveranderd - je kunt niet zomaar extra parkeerplaatsen toevoegen of verwijderen.
+// De arrayList() functie illustreert hoe je toegang krijgt tot verschillende elementen in een array met behulp van hun index.
+
+// Vectoren en hun Flexibiliteit:
+// Een vector lijkt op een trein waar je wagons (elementen) aan kunt toevoegen of verwijderen.
+// Dit maakt vectoren veelzijdiger dan arrays omdat ze kunnen groeien en krimpen tijdens het draaien van je programma.
+// In de vectorList() functie zie je hoe je elementen toevoegt aan een vector en toegang krijgt tot zijn elementen.
+
+// Werken met Arrays en Vectoren:
+// We gebruiken functies zoals somArray() en gemiddeldeArray() om operaties op arrays uit te voeren,
+// zoals het berekenen van de som en het gemiddelde van de elementen.
+// Vergelijkbare functies, somVector() en gemiddeldeVector(), worden gebruikt voor vectoren.
+// Deze demonstreren hoe je door de elementen van een vector itereert en berekeningen uitvoert.
+
+// Typecasting en Foutafhandeling:
+// In het berekenen van gemiddelden gebruiken we static_cast<float>() om een integer naar een float te converteren.
+// Dit is vergelijkbaar met het veranderen van het type doos waarin je een getal bewaart.
+// We gebruiken std::cerr voor foutafhandeling.
+// Dit is als een alarmsysteem dat afgaat wanneer er iets mis is in je programma, bijvoorbeeld als je probeert te delen door nul.
+
+// Door het begrijpen en gebruiken van arrays en vectoren, leer je hoe je efficiënt gegevens in je programma's kunt opslaan en manipuleren.
+// Deze vaardigheden zijn cruciaal voor het oplossen van complexe problemen in C++.
 class Les5 { // We beginnen een nieuwe klasse genaamd Les5
 public: // Dit betekent dat iedereen deze dingen kan gebruiken
     void runMijnCode() { // Dit is waar onze code begint

@@ -6,7 +6,34 @@
 #ifndef BEGINNER_LESSON3_H
 #define BEGINNER_LESSON3_H
 
+// Begrijpen van Basis Programmeerconcepten in C++
 
+// In deze les bouwen we voort op de basisbegrippen van C++ door drie fundamentele programmeerstructuren te onderzoeken:
+// beslissingsstructuren, switch-case structuren, en lusstructuren.
+// Dit zal je helpen om complexere taken in je code te beheren en uit te voeren. Laten we eens kijken wat er in je code gebeurt:
+
+// Beslissingsstructuren - magIkStemmen() functie:
+// Stel je voor, je wilt weten of je mag stemmen in een verkiezing.
+// In deze functie gebruik je een if-else-structuur om te bepalen of iemand, op basis van hun leeftijd, stemrecht heeft.
+// Als leeftijd 18 of ouder is, geef je aan dat de persoon mag stemmen.
+// Zo niet, dan geef je aan dat hij/zij nog niet mag stemmen.
+// Dit is vergelijkbaar met het nemen van een beslissing op basis van een voorwaarde.
+
+// Switch-case structuur - welkeDag() functie:
+// Deze functie gebruikt een switch-case-structuur om de dag van de week te bepalen.
+// Het is alsof je een kalender hebt waar je een nummer kiest en het vertelt je welke dag het is.
+// Elke case komt overeen met een dag van de week.
+// Als er geen overeenkomst is, geeft de default-case aan dat het een ongeldig nummer is.
+// Dit is handig voor situaties waar meerdere opties gecontroleerd moeten worden.
+
+// Lusstructuren - lussen() functie:
+// In deze functie onderzoeken we drie soorten lussen: for, while, en do-while.
+// De for-lus is alsof je een stappenteller hebt die een vast aantal stappen telt.
+// De while-lus lijkt op het wachten tot je telefoonbatterij leeg is - het gaat door tot een bepaalde voorwaarde niet meer waar is.
+// De do-while-lus is alsof je minstens één keer een activiteit doet voordat je besluit of je doorgaat, gebaseerd op een bepaalde voorwaarde.
+
+// Deze structuren stellen je in staat om dynamische en interactieve programma's te schrijven waarbij de flow van het programma afhankelijk is van bepaalde voorwaarden en herhalingen.
+// Door deze te beheersen, kun je je vaardigheden in C++ verder ontwikkelen en complexere problemen oplossen.
 class Les3 {
 public:
     void runMijnCode() {
