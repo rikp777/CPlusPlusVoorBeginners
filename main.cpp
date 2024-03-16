@@ -1,19 +1,21 @@
 #include <iostream> // Dit is een bibliotheek die ons helpt met dingen printen op het scherm
 #include <string>
 
-#include "Les1.h"
-#include "Les2.h"
-#include "Les3.h"
-#include "Les4.h"
-#include "Les5.h"
-#include "OLes1.h"
-#include "OLes2.h"
-#include "OLes3.h"
-#include "OLes4.h"
-#include "OLes5.h"
-#include "Les6.h"
-#include "OLes6.h"
-#include "Les7.h"
+#include "lessen/Les1/Les1.h"
+#include "lessen/les2/Les2.h"
+#include "lessen/les3/Les3.h"
+#include "lessen/les4/Les4.h"
+#include "lessen/les5/Les5.h"
+#include "lessen/les1/oefening/OLes1.h"
+#include "lessen/les2/oefening/OLes2.h"
+#include "lessen/les3/oefening/OLes3.h"
+#include "lessen/les4/oefening/OLes4.h"
+#include "lessen/oefeningen/OLes5.h"
+#include "lessen/les6/Les6.h"
+#include "lessen/les6/oefening/OLes6.h"
+#include "lessen/les7/Les7.h"
+#include "lessen/les8/Les8.h"
+#include "lessen/les8/oefening/OLes8.h"
 
 bool vertaalJaNee(const std::string &antwoord) {
     // Converteer het antwoord naar hoofdletters om het case-insensitive te maken
@@ -31,8 +33,8 @@ bool vertaalJaNee(const std::string &antwoord) {
 }
 
 int main() {
-    int ikBenBijLes = 7;
-    bool ikGaOefenen = vertaalJaNee("JA");
+    int ikBenBijLes = 8;
+    bool ikGaOefenen = vertaalJaNee("Nee");
 
     switch (ikBenBijLes) {
         case 1:
@@ -131,14 +133,28 @@ int main() {
             }
             break;
         case 7:
-            std::cout << "Les 7 wordt gerund (geen oefening): " << std::endl;
-            std::cout << std::endl;  // Print een lege regel
+            if (!ikGaOefenen) {
+                std::cout << "Les 7 wordt gerund (geen oefening): " << std::endl;
+                std::cout << std::endl;  // Print een lege regel
 
-            Les7 les7;
-            les7.runMijnCode();
+                Les7 les7;
+                les7.runMijnCode();
+            }
             break;
-        default:
-            std::cout << "Ongeldige lesnummer" << std::endl;  // voeg deze regel toe voor het geval ikBenBijLes geen geldige waarde heeft
+        case 8:
+            if (!ikGaOefenen) {
+                std::cout << "Les 8 wordt gerund (geen oefening): " << std::endl;
+                std::cout << std::endl;  // Print een lege regel
+
+                Les8 les8;
+                les8.runMijnCode();
+            } else {
+                std::cout << "Oefening Les 8 wordt gerund: " << std::endl;
+                std::cout << std::endl;  // print een lege regel
+
+                OLes8 oles8;
+                oles8.runMijnCode();
+            }
             break;
     }
 

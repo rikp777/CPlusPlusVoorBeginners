@@ -15,6 +15,7 @@
 // Denk aan een pointer als een schatkaart die je de locatie (het adres) van een schat (de variabele) in het geheugen laat zien.
 // De pointerUitleg() functie demonstreert het opslaan van een adres in een pointer en hoe je de waarde op dat adres kunt bekijken (dereferencing).
 // Het is alsof je de schatkaart volgt om te zien wat er in de doos (de variabele) zit.
+// Je kunt het ook inbeelden als je de postcode van je huis op een brief schrijft. De postbode volgt de postcode om je huis te vinden.
 
 // Referenties - Werken met Originele Variabelen:
 // Wanneer je een referentie gebruikt, zoals in de verdubbel() functie, werk je direct met de originele variabele, niet met een kopie.
@@ -30,43 +31,52 @@
 
 // Door deze concepten te begrijpen en correct toe te passen, kun je efficiënter omgaan met geheugen en complexere datastructuren en algoritmen in C++ hanteren.
 class Les6 {
-    public:
-    void runMijnCode(){
+public:
+    void runMijnCode() {
 
         pointerUitleg();
 
         int waarde = 5;  // We maken een nieuwe variabele aan met waarde 5
-        int resultaat = verdubbel(waarde);  // We roepen de functie 'verdubbel' aan en geven 'waarde' door als een referentie
+        int resultaat = verdubbel(
+                waarde);  // We roepen de functie 'verdubbel' aan en geven 'waarde' door als een referentie
 
         std::cout << "Verdubbeld: " << resultaat << std::endl;  // We laten het verdubbelde resultaat zien
-        std::cout << "Waarde: " << waarde << std::endl;  // De oorspronkelijke waarde is nu ook verdubbeld omdat we een referentie hebben gebruikt
+        std::cout << "Waarde: " << waarde
+                  << std::endl;  // De oorspronkelijke waarde is nu ook verdubbeld omdat we een referentie hebben gebruikt
 
-        int* array = maakArray(5);  // We roepen de functie 'maakArray' aan om een nieuwe array te maken
+        int *array = maakArray(5);  // We roepen de functie 'maakArray' aan om een nieuwe array te maken
         for (int i = 0; i < 5; i++) {  // We lopen door de array en laten elke waarde zien
             std::cout << array[i] << " ";  // We laten de waarde van elke positie in de array zien
         }
         delete[] array;  // We geven het geheugen terug dat we hebben gebruikt voor de array, dit is heel belangrijk!
     }
 
-    void pointerUitleg(){
+    void pointerUitleg() {
         int getal = 10;  // We maken een gewone integer variabele aan met waarde 10
-        int* pointer = &getal;  // We maken een pointer aan die het adres van 'getal' opslaat
+        int *pointer = &getal;  // We maken een pointer aan die het adres van 'getal' opslaat
 
-        std::cout << "Waarde van getal: " << getal << std::endl;  // We laten de waarde van 'getal' zien
+        std::cout << "Oorspronkelijke waarde van getal: " << getal << std::endl;  // We laten de waarde van 'getal' zien
         std::cout << "Adres van getal: " << pointer << std::endl;  // We laten het adres van 'getal' zien
-        std::cout << "Waarde op het adres: " << *pointer << std::endl;  // We laten de waarde zien die op het adres van 'getal' staat, dit heet dereferencing
+        std::cout << "Waarde op het adres (dereferencing): " << *pointer
+                  << std::endl;  // We laten de waarde zien die op het adres van 'getal' staat, dit heet dereferencing.
 
+        // Wijzig de waarde van 'getal' via de pointer
+        *pointer = 20; // We passen de waarde van 'getal' aan door de pointer te dereferencen en een nieuwe waarde toe te wijzen
+
+        std::cout << "Nieuwe waarde van getal via pointer gewijzigd: " << getal
+                  << std::endl; // We laten de nieuwe waarde van 'getal' zien
     }
 
-    int verdubbel(int& ref) {  // Deze functie neemt een referentie als parameter, dus wijzigingen in 'ref' veranderen de oorspronkelijke variabele
+    int verdubbel(
+            int &ref) {  // Deze functie neemt een referentie als parameter, dus wijzigingen in 'ref' veranderen de oorspronkelijke variabele
         ref *= 2;  // We verdubbelen de waarde van 'ref'
         return ref;  // We sturen de verdubbelde waarde terug
     }
 
-    int* maakArray(int grootte) {  // Deze functie maakt een nieuwe array van de opgegeven grootte
-        int* newArr = new int[grootte];  // We wijzen geheugen toe voor een nieuwe array
+    int *maakArray(int grootte, int beginWaarde) {  // Voeg een parameter toe voor de beginwaarde van de array-elementen
+        int *newArr = new int[grootte];  // We wijzen geheugen toe voor een nieuwe array
         for (int i = 0; i < grootte; i++) {  // We lopen door de nieuwe array en vullen deze met waarden
-            newArr[i] = i + 1;  // We zetten het getal i + 1 op elke positie in de array
+            newArr[i] = beginWaarde + i;  // We starten met 'beginWaarde' en verhogen deze met 'i' bij elke stap
         }
         return newArr;  // We sturen de pointer naar de nieuwe array terug
     }

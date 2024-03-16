@@ -65,8 +65,13 @@ public: // Dit betekent dat iedereen deze dingen kan gebruiken
         std::cout << "Som van de vector: " << somVector(mijnVector) << std::endl; // Toont de som van mijnVector
 
         // Print het gemiddelde van de elementen in mijnArray en mijnVector
-        std::cout << "Gemiddelde van de array: " << gemiddeldeArray(mijnArray, 5) << std::endl; // Toont het gemiddelde van mijnArray
-        std::cout << "Gemiddelde van de vector: " << gemiddeldeVector(mijnVector) << std::endl; // Toont het gemiddelde van mijnVector
+        std::cout << "Gemiddelde van de array: " << gemiddeldeArray(mijnArray, 5)
+                  << std::endl; // Toont het gemiddelde van mijnArray
+        std::cout << "Gemiddelde van de vector: " << gemiddeldeVector(mijnVector)
+                  << std::endl; // Toont het gemiddelde van mijnVector
+
+        keerArrayOm(mijnArray, 5); // Keert de elementen in mijnArray om
+        bevatVector(mijnVector, 3); // Controleert of mijnVector het getal 3 bevat
     }
 
     void arrayList() {
@@ -77,7 +82,7 @@ public: // Dit betekent dat iedereen deze dingen kan gebruiken
         std::cout << "Het derde getal is: " << getallen[2] << std::endl; // Het derde getal is op index 2
     }
 
-    void vectorList(){
+    void vectorList() {
         std::vector<int> getallen = {1, 2, 3, 4, 5};  // Een vector van integers
 
         // Elementen toevoegen aan de vector
@@ -138,7 +143,71 @@ public: // Dit betekent dat iedereen deze dingen kan gebruiken
         int som = somVector(vec);  // Gebruik de somVector functie om de som te berekenen
         return static_cast<float>(som) / vec.size();  // Bereken en geef het gemiddelde terug
     }
+
+    // De functie 'keerArrayOm' draait de volgorde van de elementen in een array om.
+    void keerArrayOm(int arr[], int grootte) {
+        int start = 0;  // Dit is de startindex van de array.
+        int einde = grootte - 1;  // Dit is de eindindex van de array.
+
+        // We gebruiken een 'while' lus om door de array heen te lopen.
+        // De lus gaat door zolang 'start' kleiner is dan 'einde'.
+        while (start < einde) {
+            // We slaan het element op de startindex op in een tijdelijke variabele 'temp'.
+            int temp = arr[start];
+            // Vervolgens vervangen we het element op de startindex door het element op de eindindex.
+            arr[start] = arr[einde];
+            // Daarna vervangen we het element op de eindindex door het oorspronkelijke element van de startindex.
+            arr[einde] = temp;
+
+            // We verhogen 'start' om naar het volgende element te gaan.
+            start++;
+            // We verlagen 'einde' om naar het vorige element te gaan.
+            einde--;
+        }
+        // Deze stappen worden herhaald totdat 'start' en 'einde' elkaar ontmoeten of kruisen,
+        // wat betekent dat alle elementen van de array zijn omgekeerd.
+    }
+
+    // De functie 'bevatVector' controleert of een gegeven waarde in een vector aanwezig is.
+    bool bevatVector(std::vector<int> &vec, int waarde) {
+        // We gebruiken een 'for'-lus om door elke waarde ('nummer') in de vector ('vec') te lopen.
+        for (int nummer: vec) {
+            // In de lus controleren we of het huidige nummer gelijk is aan de waarde die we zoeken.
+            if (nummer == waarde) {
+                // Als we de waarde vinden, geven we 'true' terug. Dit betekent "ja, de waarde is in de vector".
+                return true;
+            }
+        }
+        // Als we aan het einde van de lus komen zonder de waarde te vinden, geven we 'false' terug.
+        // Dit betekent "nee, de waarde is niet in de vector".
+        return false;
+    }
+    // Bijvoorbeeld, als we een vector hebben met de getallen [1, 2, 3] en we controleren op de waarde 2,
+    // dan zal de functie 'true' teruggeven omdat 2 in de vector zit.
+    // Als we controleren op 4, geeft de functie 'false' terug, omdat 4 niet in de vector voorkomt.
+
 };
+// We hebben een diepgaande kijk genomen op hoe we arrays en vectoren kunnen gebruiken in C++.
+// Arrays, met hun vaste grootte, bieden een gestructureerde manier om een verzameling van elementen op te slaan,
+// vergelijkbaar met een reeks gereserveerde parkeerplaatsen. Hoewel hun onveranderlijke grootte beperkingen met zich meebrengt,
+// bieden arrays een snelle en efficiënte manier om toegang te krijgen tot en te werken met grote hoeveelheden data.
+
+// Aan de andere kant hebben we vectoren verkend, die veel flexibeler zijn dan arrays.
+// Met de mogelijkheid om dynamisch van grootte te veranderen, fungeren vectoren als treinen waarbij je wagons kunt toevoegen of verwijderen naar behoefte.
+// Deze flexibiliteit maakt vectoren bijzonder waardevol voor situaties waar de hoeveelheid data kan variëren of vooraf niet bekend is.
+
+// Door de verschillende operaties op arrays en vectoren uit te voeren, zoals het berekenen van de som en het gemiddelde,
+// hebben we gezien hoe loops en conditionele logica kunnen worden toegepast om complexe taken met deze datastructuren uit te voeren.
+// Bovendien hebben we geleerd over het belang van typecasting en foutafhandeling, essentiële technieken voor het schrijven van robuuste en veilige C++ programma's.
+
+// In het proces van het leren over deze concepten, hebben we waardevolle vaardigheden opgedaan die fundamenteel zijn voor elk programmeringsproject.
+// Het beheersen van arrays en vectoren, samen met een goed begrip van operaties die erop kunnen worden uitgevoerd,
+// stelt ons in staat om effectief gegevens in onze programma's op te slaan, te doorzoeken, en te manipuleren.
+
+// Terwijl we onze reis in de wereld van C++ programmering voortzetten, zullen de kennis en vaardigheden die we in deze les hebben opgedaan,
+// dienen als een solide basis voor het oplossen van meer complexe problemen en het bouwen van efficiënte en effectieve softwareoplossingen.
+
+// Blijf oefenen en experimenteer met arrays en vectoren in je eigen C++ projecten om je begrip te verdiepen en je programmeervaardigheden verder te ontwikkelen.
 
 
 #endif //BEGINNER_LESSON5_H
