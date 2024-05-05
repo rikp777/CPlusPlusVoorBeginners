@@ -44,7 +44,7 @@ public:
         std::cout << "Waarde: " << waarde
                   << std::endl;  // De oorspronkelijke waarde is nu ook verdubbeld omdat we een referentie hebben gebruikt
 
-        int *array = maakArray(5);  // We roepen de functie 'maakArray' aan om een nieuwe array te maken
+        int *array = maakArray(5, 0);  // We roepen de functie 'maakArray' aan om een nieuwe array te maken
         for (int i = 0; i < 5; i++) {  // We lopen door de array en laten elke waarde zien
             std::cout << array[i] << " ";  // We laten de waarde van elke positie in de array zien
         }

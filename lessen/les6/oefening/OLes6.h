@@ -2,7 +2,7 @@
 // Created by rikpe on 09/10/2023.
 //
 #include <iostream>
-#include "../uitwerkingen/LinkedList.h"
+#include "../linkedList/LinkedList.h"
 
 #ifndef BEGINNER_OLESSON6_H
 #define BEGINNER_OLESSON6_H
@@ -94,9 +94,10 @@ public:
     void vergeetArray(int* array, int grote){
     }
 
-    // Opdracht 6: De Portaal naar het Dynamische Geheugenrijk (gemiddeld)
+    // Opdracht 6: De Portaal naar het Dynamische Geheugenrijk (moeilijk)
     // Schrijf een functie die twee arrays neemt (en hun groottes), beide dynamisch toegewezen, en ze samenvoegt tot één grote array.
     // Reflecteer op de uitdagingen van dynamische geheugenallocatie en het beheren van meerdere geheugenblokken.
+    // Voor deze opdracht heb je kennis nodig van les 7 en 8 over klassen en objecten.
     void linkedList(){
         // Eigen code
 
@@ -109,7 +110,7 @@ public:
         // lijst.weergeven();
     }
 
-    // Opdracht 7: De Wachters van het Geheugenkasteel (moeilijk)
+    // Opdracht 7: De Wachters van het Geheugenkasteel (gemiddeld)
     // Implementeer een simpele gelinkte lijst met behulp van struct en pointers. Voeg functies toe voor het toevoegen en verwijderen van elementen.
     // Onderzoek de principes van geheugenallocatie en -bevrijding in de context van een gelinkte lijststructuur.
     void samenvoegenArrays(int* array1, int grootte1, int* array2, int grootte2){

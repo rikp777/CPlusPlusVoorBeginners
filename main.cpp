@@ -6,17 +6,18 @@
 #include "lessen/les3/Les3.h"
 #include "lessen/les4/Les4.h"
 #include "lessen/les5/Les5.h"
+#include "lessen/les6/Les6.h"
+#include "lessen/les7/Les7.h"
+#include "lessen/les8/Les8.h"
 #include "lessen/les1/oefening/OLes1.h"
 #include "lessen/les2/oefening/OLes2.h"
 #include "lessen/les3/oefening/OLes3.h"
 #include "lessen/les4/oefening/OLes4.h"
-#include "lessen/oefeningen/OLes5.h"
-#include "lessen/les6/Les6.h"
+#include "lessen/Les5/oefening/OLes5.h"
 #include "lessen/les6/oefening/OLes6.h"
-#include "lessen/les7/Les7.h"
-#include "lessen/les8/Les8.h"
 #include "lessen/les8/oefening/OLes8.h"
 
+//Ga naar onder om je les te kiezen en te oefenen.
 bool vertaalJaNee(const std::string &antwoord) {
     // Converteer het antwoord naar hoofdletters om het case-insensitive te maken
     std::string antwoordHoofdletters;
@@ -32,9 +33,25 @@ bool vertaalJaNee(const std::string &antwoord) {
     }
 }
 
+
+// Hier kies je de les en of je wilt oefenen
 int main() {
-    int ikBenBijLes = 8;
-    bool ikGaOefenen = vertaalJaNee("Nee");
+
+
+
+
+    int ikBenBijLes = 7;                                // Kies de les waar je naartoe wilt gaan (1-8)
+    bool ikGaOefenen = vertaalJaNee("Nee");     // Kies of je wilt oefenen of niet (Ja/Nee)
+
+
+
+
+
+
+    // ============================================================
+    // Welkomstbericht
+    std::cout << "Welkom bij de C++ beginnerscursus!" << std::endl;
+    std::cout << "Gemaakt door: Rik Peeters" << std::endl;
 
     switch (ikBenBijLes) {
         case 1:
@@ -155,6 +172,10 @@ int main() {
                 OLes8 oles8;
                 oles8.runMijnCode();
             }
+            break;
+
+        default:
+            std::cout << "Les niet gevonden! ga naar de main.cpp en verander ikBenBijLes naar een getal tussen (1-8)." << std::endl;
             break;
     }
 
