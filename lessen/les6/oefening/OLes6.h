@@ -2,6 +2,7 @@
 // Created by rikpe on 09/10/2023.
 //
 #include <iostream>
+#include "../uitwerkingen/LinkedList.h"
 
 #ifndef BEGINNER_OLESSON6_H
 #define BEGINNER_OLESSON6_H
@@ -40,6 +41,15 @@ public:
 
         // Extra Oefening: Onderzoek het magische bos met je magische spiegels.
         verkenMagischBos(pointer1, pointer2);
+
+        // Extra Oefening: Spiegel de array
+        int array[] = {1, 2, 3, 4, 5};
+        spiegelArray(array, 5);
+        vergeetArray(array, 5);
+        samenvoegenArrays(array, 5, array, 5);
+        zoekWaarde(array, 5, 3);
+        transformeerArray(array, 5);
+        linkedList();
     }
 
     void ruilWaarden(int* ptr1, int* ptr2) {
@@ -70,30 +80,52 @@ public:
     }
 
 
-    // Opdracht 4: De Magische Reflectie
+    // Opdracht 4: De Magische Reflectie (makkelijk)
     // Schrijf een functie die een array en zijn grootte neemt. De functie moet alle elementen van de array spiegelen.
     // Voorbeeld: Als de array [1, 2, 3, 4, 5] is, moet deze na de operatie [5, 4, 3, 2, 1] zijn.
     // Denk na over hoe je dit kunt bereiken met behulp van pointers.
+    void spiegelArray(int* array, int grote){
 
-    // Opdracht 5: De Toverdrank van Vergetelheid
+    }
+
+    // Opdracht 5: De Toverdrank van Vergetelheid (makkelijk)
     // Maak een functie die een dynamisch toegewezen array 'vergeet' door alle elementen op nul te zetten.
     // Denk na over het belang van het 'nulstellen' van gegevens in bepaalde situaties.
+    void vergeetArray(int* array, int grote){
+    }
 
-    // Opdracht 6: De Portaal naar het Dynamische Geheugenrijk
+    // Opdracht 6: De Portaal naar het Dynamische Geheugenrijk (gemiddeld)
     // Schrijf een functie die twee arrays neemt (en hun groottes), beide dynamisch toegewezen, en ze samenvoegt tot één grote array.
     // Reflecteer op de uitdagingen van dynamische geheugenallocatie en het beheren van meerdere geheugenblokken.
+    void linkedList(){
+        // Eigen code
 
-    // Opdracht 7: De Wachters van het Geheugenkasteel
+
+        // Uitwerking
+        // LinkedList lijst;
+        // lijst.toevoegenAanEinde(10);
+        // lijst.toevoegenAanEinde(20);
+        // lijst.toevoegenAanEinde(30);
+        // lijst.weergeven();
+    }
+
+    // Opdracht 7: De Wachters van het Geheugenkasteel (moeilijk)
     // Implementeer een simpele gelinkte lijst met behulp van struct en pointers. Voeg functies toe voor het toevoegen en verwijderen van elementen.
     // Onderzoek de principes van geheugenallocatie en -bevrijding in de context van een gelinkte lijststructuur.
+    void samenvoegenArrays(int* array1, int grootte1, int* array2, int grootte2){
+    }
 
-    // Opdracht 8: Echo's in het Geheugendoolhof
+    // Opdracht 8: Echo's in het Geheugendoolhof (makkelijk)
     // Ontwikkel een functie die zoekt naar een specifieke waarde in een array en de index teruggeeft met behulp van pointers.
     // Overweeg hoe pointers kunnen worden gebruikt om efficiënt door gegevens te navigeren.
+    void zoekWaarde(int* array, int grootte, int waarde){
+    }
 
-    // Opdracht 9: Tovenaarsleerling bij de Array-tovenaar
+    // Opdracht 9: Tovenaarsleerling bij de Array-tovenaar (gemiddeld)
     // Creëer een functie die een array (en zijn grootte) neemt en deze op een unieke manier transformeert, bijvoorbeeld door elke waarde te kwadrateren.
     // Reflecteer op het gebruik van pointers voor directe manipulatie van array-elementen.
+    void transformeerArray(int* array, int grootte){
+    }
 
     // Deze opdrachten zijn ontworpen om je kennis en vaardigheden op het gebied van pointers, geheugenbeheer, en datastructuren te vergroten.
     // Door deze magische uitdagingen aan te gaan, word je een meester in de kunst van C++ magie!
